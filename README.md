@@ -27,6 +27,6 @@ rCore学习笔记，[rCore-Tutorial-Book-v3 3.6.0-alpha.1文档](https://rcore-o
 因此，再次学习清华大学的rCore课程。
 ## rCore-Tutorial-Book [第三版](https://rcore-os.cn/rCore-Tutorial-Book-v3/index.html)
 ### [第零章：操作系统概述](./supplementary_materials/ch0.md)
-
+### [第一章：应用程序与基本执行环境](./supplementary_materials/ch1.md)
 
 
