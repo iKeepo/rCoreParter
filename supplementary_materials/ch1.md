@@ -48,3 +48,8 @@ RISC-V手册附录A中列出了RV32/63I的所有指令、伪指令。
 汇编指示符与伪指令不同，是对数据层面的操作，指令这个字符串层面，非执行层面。
 ## 链接
 链接器有格式么，是对字节码的操作。
+### 内存文件
+PIE: Position-Independent Executable
+程序内各组件内存地址是相对位置。
+### 安装riscv64-unknown-elf-gcc/gdb
+
