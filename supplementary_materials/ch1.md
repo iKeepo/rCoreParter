@@ -51,5 +51,9 @@ RISC-V手册附录A中列出了RV32/63I的所有指令、伪指令。
 ### 内存文件
 PIE: Position-Independent Executable
 程序内各组件内存地址是相对位置。
+## [gdb](https://sourceware.org/gdb/documentation/)
+
 ### 安装riscv64-unknown-elf-gcc/gdb
+支持riscv64指令集的gdb调试器riscv64-unknown-elf-gdb, 包含在riscv64 gcc工具链中，预编译版本[下载](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter0/5setup-devel-env.html#gdb)。
+## [为内核支持函数调用](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter1/5support-func-call.html)
 
