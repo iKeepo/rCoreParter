@@ -56,4 +56,20 @@ PIE: Position-Independent Executable
 ### 安装riscv64-unknown-elf-gcc/gdb
 支持riscv64指令集的gdb调试器riscv64-unknown-elf-gdb, 包含在riscv64 gcc工具链中，预编译版本[下载](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter0/5setup-devel-env.html#gdb)。
 ## [为内核支持函数调用](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter1/5support-func-call.html)
-
+- 执行序列：控制流vs函数调用
+函数调用返回跳转到一个运行时确定的地址，其他控制流跳转到一个编译器固定下来的地址。
+为此，在指令集层面做出区别，用于函数调用的跳转指令需要有一些额外的功能，在RISC-V架构上，有两条相关质量：jal rd, jalr rd.
+- 函数调用上下文
+对于函数，包括多层嵌套的函数，编译器是对所有函数进行独立编译的。
+这就导致任何函数并不能知道子函数修改了哪些寄存器。
+每个函数在跳转之前需要保存下一条指令到ra寄存器，每个函数的这个不能改变，不然就会出错。
+在控制流转移前后需要保持不变的寄存器集合称为函数调用上下文（Function Call Context）。
+- 上下文切换
+因为每个CPU只有一套寄存器，要实现子函数调用前后上下文不变，就需要外部的物理内存的帮助。
+这个保存恢复的动作，是由子函数的调用者和被调用者合作完成。
+这个分工就导致过程中的寄存器分成两类：
+1. 被调用者保存寄存器Callee-Saved
+2. 调用者保存寄存器Caller-Saved
+- 开场Prologue 结尾Epilogue
+完成保存恢复动作的代码，是由编译器帮我们自动插入的。
+### [调用规范](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter1/5support-func-call.html#term-calling-convention)
