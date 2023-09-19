@@ -73,3 +73,33 @@ PIE: Position-Independent Executable
 - 开场Prologue 结尾Epilogue
 完成保存恢复动作的代码，是由编译器帮我们自动插入的。
 ### [调用规范](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter1/5support-func-call.html#term-calling-convention)
+Calling Convention, 约定在某个指令集架构上，某种编程语言的函数调用如何实现。
+在Rust中通过extern "C"可以引用一个外部的C函数接口（这里就是要遵循目标平台上C的语言调用规范）。
+
+
+关键点在于是关于“函数调用”。
+
+函数调用这个事情，占据了寄存器使用规则的大部分篇幅。
+- 寄存器名称a0, x0, t0, s0由来
+a: argument, 用于传递函数的参数；
+t: temporary register, 用于临时存储数据；
+s: saved register, 函数调用期间需要保存其值。
+
+x: general purpose register, 通用寄存器。
+- 特殊寄存器
+sp(x2): 栈指针Stack Pointer，被调用者保存，指向下一个将要被存储的栈顶位置；
+fp(s0): 可以作为s0临时寄存器，也可以作为栈帧指针Frame Pointer寄存器，表示当前栈帧的起始位置；
+- 栈 Stack
+函数调用上下文的保存/恢复时期，寄存器内容的存储位置；
+- 栈帧 Stack Frame
+某个函数所占据的栈内空间[新sp, 旧sp)；
+栈帧由函数的开场代码分配，由结尾代码回收。
+所谓回收，就是将sp的值修改增加分配的字节数回到分配前的状态，这也解释了为什么sp需要被调用者保存。
+所有函数的栈帧串起来就组成了一个完整的函数调用栈。
+当前执行函数的栈帧的两个边界分别由栈指针Stack Pointer寄存器和栈帧指针Frame Pointer.
+- 栈的种类：数据结构 vs 函数调用
+从数据结构上看，栈是一个后入先出LastInFirstOut的线性表。只支持访问栈顶附近的元素，也因此需要维护一个指向栈顶的指针来表示栈当前的状态。
+因为只有一个sp表示栈顶位置以确定栈帧位置，因此通过sp+偏移量来访问栈的其他地址。
+## [基于SBI服务完成输出和关机](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter1/6print-and-shutdown-based-on-sbi.html)
+
+
