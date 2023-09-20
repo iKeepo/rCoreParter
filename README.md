@@ -28,5 +28,5 @@ rCore学习笔记，[rCore-Tutorial-Book-v3 3.6.0-alpha.1文档](https://rcore-o
 ## rCore-Tutorial-Book [第三版](./supplementary_materials/ch.md)
 ### [第零章：操作系统概述](./supplementary_materials/ch0.md)
 ### [第一章：应用程序与基本执行环境](./supplementary_materials/ch1.md)
-
+### [第二章：批处理系统](./supplementary_materials/ch2.md)
 
