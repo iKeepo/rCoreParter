@@ -15,6 +15,8 @@ ecall(EnvironmentCall): 具有用户态到内核态的执行环境切换能力�
 - RISC-V异常一览表疑问
 1. interrupt为0表示什么？
 手册3.1.15 Machine Cause Register(mcause) 的数值，interrupt是mcause寄存器首位指示是中断还是异常。
+2. ExceptionCode 11, ecall from M-mode
+M态下用ecall是为了方便，此时还需要M态自己处理，US态下的ecall一定是M层处理。
 - [RISC-V的特权指令](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/1rv-privilege.html#term-csr-instr)
 每个特权级有自己特有的指令和控制状态寄存器CSR, Control and Status Register;
 ## [实现应用程序](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/2application.html)
