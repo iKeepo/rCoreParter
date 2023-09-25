@@ -81,9 +81,10 @@ Calling Convention, 约定在某个指令集架构上，某种编程语言的函
 
 函数调用这个事情，占据了寄存器使用规则的大部分篇幅。
 - 寄存器名称a0, x0, t0, s0由来
-a: argument, 用于传递函数的参数；
+a: argument, 用于传递函数的参数(a0-a7 -> x10-x17)；
 t: temporary register, 用于临时存储数据；
 s: saved register, 函数调用期间需要保存其值。
+ra: x1
 
 x: general purpose register, 通用寄存器。
 - 特殊寄存器

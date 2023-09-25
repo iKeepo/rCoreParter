@@ -20,3 +20,15 @@ M态下用ecall是为了方便，此时还需要M态自己处理，US态下的ec
 - [RISC-V的特权指令](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/1rv-privilege.html#term-csr-instr)
 每个特权级有自己特有的指令和控制状态寄存器CSR, Control and Status Register;
 ## [实现应用程序](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/2application.html)
+- [系统调用](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/2application.html#term-call-syscall)
+```
+fn sys_exit(exit_code: usize) -> !;
+```
+返回类型!(never type)表示永远不会返回。
+不返回指的是执行某种程序中止操作，退出程序或者panic。
+系统调用，实际上是汇编指令级的二进制接口。
+- 寄存器编号与别名
+a0-a6保存系统调用参数，a0保存系统调用的返回值。
+a7用来传递syscall ID,所有的syscall都是通过ecall指令触发，因此除了常规的输入参数之外，还需要额外一个寄存器来保存要请求哪个系统调用。
+- [编译生成应用程序二进制码](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/2application.html#id8)
+
