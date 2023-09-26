@@ -31,4 +31,6 @@ fn sys_exit(exit_code: usize) -> !;
 a0-a6保存系统调用参数，a0保存系统调用的返回值。
 a7用来传递syscall ID,所有的syscall都是通过ecall指令触发，因此除了常规的输入参数之外，还需要额外一个寄存器来保存要请求哪个系统调用。
 - [编译生成应用程序二进制码](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/2application.html#id8)
-
+## [实现批处理操作系统](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/3batch-system.html)
+## [实现特权级的切换](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/4trap-handling.html)
+- [特权级切换相关的控制状态寄存器](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter2/4trap-handling.html#id4)
