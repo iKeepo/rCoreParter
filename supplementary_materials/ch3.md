@@ -7,3 +7,6 @@
 ## [多道程序放置与加载](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter3/1multi-loader.html)
 ## [任务切换](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter3/2task-switching.html)
 - [不同类型的上下文与切换](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter3/2task-switching.html#id4)
+## [多道程序与协作式调度](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter3/3multiprogramming.html)
+## [分时多任务系统与抢占式调度](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter3/4time-sharing-system.html)
+同步是一条指令流，异步是两条指令流。

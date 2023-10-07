@@ -29,4 +29,5 @@ rCore学习笔记，[rCore-Tutorial-Book-v3 3.6.0-alpha.1文档](https://rcore-o
 ### [第零章：操作系统概述](./supplementary_materials/ch0.md)
 ### [第一章：应用程序与基本执行环境](./supplementary_materials/ch1.md)
 ### [第二章：批处理系统](./supplementary_materials/ch2.md)
-
+### [第三章：多道程序与分时多任务](./supplementary_materials/ch3.md)
+### [第四章：地址空间](./supplementary_materials/ch4.md)
