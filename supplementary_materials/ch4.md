@@ -1,2 +1,5 @@
 # [第四章：地址空间](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/index.html)
 ## [引言](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/0intro.html)
+## [Rust中的动态内存分配](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/1rust-dynamic-allocation.html)
+## [地址空间](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/2address-space.html)
+- [增加硬件加速虚实地址转换](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/2address-space.html#id6)
