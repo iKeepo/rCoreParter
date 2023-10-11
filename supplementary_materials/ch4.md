@@ -17,3 +17,5 @@ r表示当前应用可以读取该内存，w表示当前应用可以写该内存
 ## [管理SV39多级页表](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/4sv39-implementation-2.html)
 ## [内核与应用的地址空间](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/5kernel-app-spaces.html)
 ## [基于地址空间的分时多任务](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/6multitasking-based-on-as.html)
+## [超越物理内存的地址空间](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/7more-as.html)
+CPU有分时计算，内存也有分时复用，即SWAP，临时不用的内存放到硬盘上交换以扩展可用内存空间。
