@@ -11,4 +11,5 @@ Process vs. Task差异在于动态，同一个可执行文件可以启动两个�
 多个协程Coroutine，Fiber共享一个线程的栈，存在于用户态，因此OS看不到协程，也就谈不上对协程的管理；
 ## [进程管理的核心数据结构](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter5/2core-data-structures.html)
 ## [进程管理机制的设计实现](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter5/3implement-process-mechanism.html)
+## [进程调度](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter5/4scheduling.html)
 
