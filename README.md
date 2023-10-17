@@ -33,3 +33,5 @@ rCore学习笔记，[rCore-Tutorial-Book-v3 3.6.0-alpha.1文档](https://rcore-o
 ### [第四章：地址空间](./supplementary_materials/ch4.md)
 ### [第五章：进程](./supplementary_materials/ch5.md)
 ### [第六章：文件系统](./supplementary_materials/ch6.md)
+### [第七章：进程间通信与 I/O 重定向](./supplementary_materials/ch7.md)
+### [第八章：并发](./supplementary_materials/ch8.md)
