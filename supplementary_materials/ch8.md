@@ -14,4 +14,13 @@
 ## [内核态的线程管理](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/1thread-kernel.html)
 进程的主要目的是隔离，线程是共享，也就是同步。
 ## [互斥锁](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/2lock.html)
+锁是用来锁资源的，资源被锁之后，只有拿到锁的线程才可以进入临界区；
+## [信号量机制](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/3semaphore.html)
+信号量比互斥锁更灵活的同步互斥机制；
+信号量描述的同步需求：初始状态下，某种资源的可用数量为一个非负整数N；
+信号量支持两种操作：
+1. P尝试，占用一个资源
+2. V增加，归还一个资源
+当N=1时称为二值信号量Binary Semaphore，等价于互斥锁；
+## [条件变量机制](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/4condition-variable.html)
 
