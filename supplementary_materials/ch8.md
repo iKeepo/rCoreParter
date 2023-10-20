@@ -23,4 +23,5 @@
 2. V增加，归还一个资源
 当N=1时称为二值信号量Binary Semaphore，等价于互斥锁；
 ## [条件变量机制](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/4condition-variable.html)
+## [并发中的问题](https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter8/5concurrency-problem.html)
 
