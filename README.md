@@ -1,4 +1,5 @@
 # rCoreParter
+> 第三遍学习, 目标是逐行代码搞懂
 rCore学习笔记，[rCore-Tutorial-Book-v3 3.6.0-alpha.1文档](https://rcore-os.cn/rCore-Tutorial-Book-v3/index.html)补充材料
 ## Introduce
 作为自学编程者，面对种类繁杂的知识：数据库、网络、操作系统、CPU、Python、Rust、C...
